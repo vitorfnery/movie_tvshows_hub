@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-image: url(./assets/bg.jpg);
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+body * {
+  font-family: "Montserrat", sans-serif;
+  line-height: 160%;
+}
+
+header {
+  padding-top: 32px;
+  height: calc(120px + 32px);
+}
+
+header div {
+  width: 120px;
+  margin: auto;
+  background-image: linear-gradient(90deg, #c91842 0%, #5cc2e2 100%);
+  border-radius: 50%;
+  display: flex;
+  padding: 4px;
+  transition: transform 0.3s;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header div img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 520px;
+  width: 90%;
+  margin: 32px auto;
+  display: grid;
+  gap: 24px;
+}
+
+section {
+  color: white;
+  background-image: linear-gradient(90deg, #c91842 0%, #5cc2e2 100%);
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+section div {
+  background-color: #262629;
+  padding: 24px 32px 32px;
+  border-radius: 8px;
+}
+
+section p {
+  color: #c1c1c1;
+  letter-spacing: -0.18px;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+section ul li {
+  transition: transform 0.3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+.movies_tv-list img {
+  width: 100px;
+  border: 1px solid #555555;
+  border-radius: 8px;
+}
+
+/*animation*/
+
+header div {
+  animation: fromTop 0.7s 0.2s backwards;
+}
+
+main section {
+  animation: fromLeft 0.7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+
+main section:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+main section:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
